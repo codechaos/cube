@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Cube</title>
+  <style>
+    :root {
+      --front-color: yellow;
+      --top-middle-color: yellow;
+      --middle-left-color: yellow;
+      --center-color: yellow;
+      --middle-right-color: yellow;
+      --bottom-middle-color: yellow;
+    }
+
+    #cube:hover{
+      --top-middle-color: blue;
+      --middle-left-color: red;
+      --center-color: white;
+      --middle-right-color: orange;
+      --bottom-middle-color: lime;
+    }
+
+    /* align cube in cente r*/
+    html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    /* make cube square shaped */
+    body {
+      width: 30%;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+    }
+
+    #front-face {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #front-face{
+      background-color: black;
+      border-radius: 2%;
+      padding: 0.5%;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 33.333%;
+    }
+
+    .front-sticker {
+      width: 100%;
+      margin: 0.5%;
+      background-color: var(--front-color);
+      border-radius: 5%;
+    }
+
+    #front-top-second {
+      border-bottom-left-radius: 30%;
+      border-bottom-right-radius: 30%;
+      background-color: var(--top-middle-color);
+    }
+
+    #front-middle-first {
+      border-bottom-right-radius: 30%;
+      border-top-right-radius: 30%;
+      background-color: var(--middle-left-color);
+    }
+
+    #front-middle-third {
+      border-bottom-left-radius: 30%;
+      border-top-left-radius: 30%;
+      background-color: var(--middle-right-color);
+    }
+
+    #front-bottom-second {
+      border-top-left-radius: 30%;
+      border-top-right-radius: 30%;
+      background-color: var(--bottom-middle-color);
+    }
+
+    #front-middle-second {
+      border-radius: 25%;
+      background-color: var(--center-color);
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div id="cube">
+    <div id="front-face">
+      <div class="row">
+        <span class="front-sticker" id="front-top-first"></span>
+        <span class="front-sticker" id="front-top-second"></span>
+        <span class="front-sticker" id="front-top-third"></span>
+      </div>
+      <div class="row">
+        <span class="front-sticker" id="front-middle-first"></span>
+        <span class="front-sticker" id="front-middle-second"></span>
+        <span class="front-sticker" id="front-middle-third"></span>
+      </div>
+      <div class="row">
+        <span class="front-sticker" id="front-bottom-first"></span>
+        <span class="front-sticker" id="front-bottom-second"></span>
+        <span class="front-sticker" id="front-bottom-third"></span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
